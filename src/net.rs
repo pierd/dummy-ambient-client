@@ -1,10 +1,13 @@
-use std::{net::{SocketAddr, IpAddr, Ipv4Addr}, sync::Arc};
-use quinn::{Endpoint, TransportConfig, ClientConfig};
+use anyhow::Context;
+use quinn::{ClientConfig, Endpoint, TransportConfig};
 use rand::Rng;
 use rustls::Certificate;
-use tokio::net::ToSocketAddrs;
-use anyhow::Context;
 use std::time::Duration;
+use std::{
+    net::{IpAddr, Ipv4Addr, SocketAddr},
+    sync::Arc,
+};
+use tokio::net::ToSocketAddrs;
 
 use crate::root_certs::load_root_certs;
 

@@ -17,5 +17,5 @@ pub struct ServerInfo {
     pub main_package_name: String,
     pub content_base_url: String,
     pub version: String,
-    pub external_components: serialization::FailableDeserialization<Vec<String>>,   // not really
+    pub external_components: serialization::FailableDeserialization<Vec<String>>, // not really the type and not really used
 }
